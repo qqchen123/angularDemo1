@@ -13,6 +13,8 @@ import { TodolistComponent } from './components/todolist/todolist.component';
 
 import { StorageService } from './services/storage.service';
 import { GoodsComponent } from './components/goods/goods.component';
+import { TransitionComponent } from './components/transition/transition.component';
+import { OrderComponent } from './components/order/order.component';
 
 @NgModule({
   /*配置当前项目运行的组件 */
@@ -25,6 +27,8 @@ import { GoodsComponent } from './components/goods/goods.component';
     SearchComponent,
     TodolistComponent,
     GoodsComponent,
+    TransitionComponent,
+    OrderComponent,
   ],
   /*配置当前模块运行依赖的其他模块 */
   imports: [BrowserModule, AppRoutingModule, FormsModule],
