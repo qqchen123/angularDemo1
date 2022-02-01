@@ -15,6 +15,7 @@ import { StorageService } from './services/storage.service';
 import { GoodsComponent } from './components/goods/goods.component';
 import { TransitionComponent } from './components/transition/transition.component';
 import { OrderComponent } from './components/order/order.component';
+import { UserComponent } from './components/user/user.component';
 
 @NgModule({
   /*配置当前项目运行的组件 */
@@ -29,6 +30,7 @@ import { OrderComponent } from './components/order/order.component';
     GoodsComponent,
     TransitionComponent,
     OrderComponent,
+    UserComponent,
   ],
   /*配置当前模块运行依赖的其他模块 */
   imports: [BrowserModule, AppRoutingModule, FormsModule],
