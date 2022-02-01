@@ -7,6 +7,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 })
 export class GoodsComponent implements OnInit {
   @ViewChild('mybox') mybox: any;
+  @ViewChild('header') header: any;
   constructor() {}
 
   ngOnInit(): void {}
@@ -17,5 +18,7 @@ export class GoodsComponent implements OnInit {
     this.mybox.nativeElement.style.width = '200px';
     this.mybox.nativeElement.style.height = '200px';
     this.mybox.nativeElement.style.background = 'red';
+
+    this.header.run();
   }
 }
