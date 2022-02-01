@@ -1,0 +1,49 @@
+<p>home works!</p>
+<img width="200px" [src]="picUrl" />
+<img width="200px" src="assets/40.jpeg" />
+<hr />
+<h1>循环数据，显示索引</h1>
+<ul>
+  <li *ngFor="let item of list; let key = index">
+    <span *ngIf="key == 1" class="red"> {{ key }}--{{ item.title }}</span>
+    <span *ngIf="key != 1"> {{ key }}--{{ item.title }}</span>
+  </li>
+</ul>
+<h1>*ngIf="条件判断"</h1>
+<div *ngIf="flag">1111</div>
+<div *ngIf="!flag">222</div>
+
+<h1>switch</h1>
+<div [ngSwitch]="score">
+  <div *ngSwitchCase="80">output1</div>
+  <div *ngSwitchCase="60">output2</div>
+  <div *ngSwitchCase="40">output3</div>
+  <div *ngSwitchDefault>output4</div>
+</div>
+<h1>条件判断[ngclass][ngstyle]</h1>
+<div [ngClass]="{ red: flag }">ngclassngclassngclassngclassngclass</div>
+
+<ul>
+  <li
+    *ngFor="let item of list; let key = index"
+    [ngClass]="{ red: key == 1, blue: key == 0 }"
+  >
+    {{ key }}-{{ item.title }}
+  </li>
+</ul>
+<div [ngStyle]="{ color: 'red' }">123123123123</div>
+<div [ngStyle]="{ color: color }">2222222</div>
+<h1>管道</h1>
+<div>{{ today | date: "yyyy-MM-dd " }}</div>
+<h1>事件</h1>
+<h2>{{ title }}</h2>
+<button (click)="run()">button</button>
+<button (click)="getData()">getData</button>
+<button (click)="setData()">setData</button>
+<h1>表单事件，事件对象</h1>
+<input type="text" (keydown)="keyclick($event)" />
+<h1>双向数据绑定-mvvm 表单</h1>
+<input type="text" [(ngModel)]="keywords" />
+{{ keywords }}
+<button (click)="changemvvm()">change</button>
+<hr />

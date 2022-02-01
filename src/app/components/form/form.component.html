@@ -1,0 +1,58 @@
+<p>form works!</p>
+<h1>人员登记系统</h1>
+<div class="people_list">
+  <ul>
+    <li>
+      username:<input
+        type="text"
+        name="username"
+        [(ngModel)]="peopleInfo.username"
+      />
+    </li>
+    <li>
+      sex:<input
+        type="radio"
+        name="sex"
+        value="1"
+        [(ngModel)]="peopleInfo.sex"
+      />boy;
+      <input
+        type="radio"
+        name="sex"
+        value="0"
+        [(ngModel)]="peopleInfo.sex"
+      />girl;
+    </li>
+    <li>
+      city:<select name="city" id="city" [(ngModel)]="peopleInfo.city">
+        <option [value]="item" *ngFor="let item of peopleInfo.cityList">
+          {{ item }}
+        </option>
+      </select>
+    </li>
+    <li>
+      hobby:<br />
+      <span *ngFor="let item of peopleInfo.hobby; let key = index">
+        <input
+          type="checkbox"
+          [id]="'check' + key"
+          [(ngModel)]="item.checked"
+        />
+        <label [for]="'check' + key">{{ item.title }};</label>
+      </span>
+    </li>
+    <li>
+      remark:
+      <br />
+      <textarea
+        name="remark"
+        [(ngModel)]="peopleInfo.remark"
+        id="remark"
+        cols="30"
+        rows="10"
+      ></textarea>
+    </li>
+  </ul>
+  <button (click)="doSub()">submit</button>
+  <div>{{ peopleInfo | json }}</div>
+</div>

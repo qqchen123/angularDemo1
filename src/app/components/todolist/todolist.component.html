@@ -1,0 +1,36 @@
+<p>todolist works!</p>
+<ul>
+  <li>
+    <input
+      type="text"
+      name=""
+      id=""
+      [(ngModel)]="keyword"
+      (keyup)="dosearch($event)"
+    />
+    <!-- <button (click)="dosearch()">search</button> -->
+  </li>
+  <br />
+  <li><hr /></li>
+  <li style="color: aquamarine"><h3>waiting LIST</h3></li>
+  <li
+    *ngFor="let item of historyList; let key = index"
+    style="color: cadetblue"
+    [hidden]="item.status"
+  >
+    <input type="checkbox" (change)="changeList()" [(ngModel)]="item.status" />
+    {{ item.title }}--
+    <button (click)="delHistry(key)">x</button>
+  </li>
+  <li style="color: coral"><h3>finish list</h3></li>
+  <li
+    *ngFor="let item of historyList; let key = index"
+    style="color: cadetblue"
+    [hidden]="!item.status"
+  >
+    <input type="checkbox" (change)="changeList()" [(ngModel)]="item.status" />
+    {{ item.title }}--
+    <button (click)="delHistry(key)">x</button>
+  </li>
+</ul>
+<div>{{ historyList | json }}</div>

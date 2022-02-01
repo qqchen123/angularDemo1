@@ -1,0 +1,17 @@
+<p>search works!</p>
+<ul>
+  <li>
+    <input type="text" name="" id="" [(ngModel)]="keyword" />
+    <button (click)="dosearch()">search</button>
+  </li>
+  <br />
+  <li><hr /></li>
+  <li style="color: aquamarine">LIST</li>
+  <li
+    *ngFor="let item of historyList; let key = index"
+    style="color: cadetblue"
+  >
+    {{ item }}-- <button (click)="delHistry(key)">x</button>
+  </li>
+</ul>
+<div>{{ historyList | json }}</div>
