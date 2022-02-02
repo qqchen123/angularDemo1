@@ -20,6 +20,7 @@ import { OrderComponent } from './components/order/order.component';
 import { UserComponent } from './components/user/user.component';
 import { RequestComponent } from './components/request/request.component';
 import { NewscontentComponent } from './components/newscontent/newscontent.component';
+import { OrdercontentComponent } from './components/ordercontent/ordercontent.component';
 
 @NgModule({
   /*配置当前项目运行的组件 */
@@ -37,6 +38,7 @@ import { NewscontentComponent } from './components/newscontent/newscontent.compo
     UserComponent,
     RequestComponent,
     NewscontentComponent,
+    OrdercontentComponent,
   ],
   /*配置当前模块运行依赖的其他模块 */
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],

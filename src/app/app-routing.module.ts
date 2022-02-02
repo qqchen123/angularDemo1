@@ -13,13 +13,16 @@ import { FormComponent } from './components/form/form.component';
 import { SearchComponent } from './components/search/search.component';
 import { TodolistComponent } from './components/todolist/todolist.component';
 import { NewscontentComponent } from './components/newscontent/newscontent.component';
+import { OrdercontentComponent } from './components/ordercontent/ordercontent.component';
 const routes: Routes = [
   { path: 'transition', component: TransitionComponent },
   { path: 'user', component: UserComponent },
   { path: 'home', component: HomeComponent },
   { path: 'news', component: NewsComponent },
   { path: 'form', component: FormComponent },
-  { path: 'newscontent/:aid', component: NewscontentComponent },
+  { path: 'newscontent', component: NewscontentComponent },
+  { path: 'order', component: OrderComponent },
+  { path: 'ordercontent/:aid', component: OrdercontentComponent },
   /*匹配不到路由时 */
   { path: '**', redirectTo: 'user' },
 ];
