@@ -12,12 +12,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { FormComponent } from './components/form/form.component';
 import { SearchComponent } from './components/search/search.component';
 import { TodolistComponent } from './components/todolist/todolist.component';
+import { NewscontentComponent } from './components/newscontent/newscontent.component';
 const routes: Routes = [
   { path: 'transition', component: TransitionComponent },
   { path: 'user', component: UserComponent },
   { path: 'home', component: HomeComponent },
   { path: 'news', component: NewsComponent },
   { path: 'form', component: FormComponent },
+  { path: 'newscontent/:aid', component: NewscontentComponent },
   /*匹配不到路由时 */
   { path: '**', redirectTo: 'user' },
 ];

@@ -19,7 +19,7 @@ import { TransitionComponent } from './components/transition/transition.componen
 import { OrderComponent } from './components/order/order.component';
 import { UserComponent } from './components/user/user.component';
 import { RequestComponent } from './components/request/request.component';
-import { ContentComponent } from './components/content/content.component';
+import { NewscontentComponent } from './components/newscontent/newscontent.component';
 
 @NgModule({
   /*配置当前项目运行的组件 */
@@ -36,7 +36,7 @@ import { ContentComponent } from './components/content/content.component';
     OrderComponent,
     UserComponent,
     RequestComponent,
-    ContentComponent,
+    NewscontentComponent,
   ],
   /*配置当前模块运行依赖的其他模块 */
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
