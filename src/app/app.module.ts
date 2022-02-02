@@ -21,6 +21,12 @@ import { UserComponent } from './components/user/user.component';
 import { RequestComponent } from './components/request/request.component';
 import { NewscontentComponent } from './components/newscontent/newscontent.component';
 import { OrdercontentComponent } from './components/ordercontent/ordercontent.component';
+import { IndexComponent } from './components/index/index.component';
+import { ProductComponent } from './components/product/product.component';
+import { WelcomeComponent } from './components/index/welcome/welcome.component';
+import { SettingsComponent } from './components/index/settings/settings.component';
+import { PcateComponent } from './components/product/pcate/pcate.component';
+import { PlistComponent } from './components/product/plist/plist.component';
 
 @NgModule({
   /*配置当前项目运行的组件 */
@@ -39,6 +45,12 @@ import { OrdercontentComponent } from './components/ordercontent/ordercontent.co
     RequestComponent,
     NewscontentComponent,
     OrdercontentComponent,
+    IndexComponent,
+    ProductComponent,
+    WelcomeComponent,
+    SettingsComponent,
+    PcateComponent,
+    PlistComponent,
   ],
   /*配置当前模块运行依赖的其他模块 */
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
