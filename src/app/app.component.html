@@ -6,5 +6,17 @@
 <!-- <app-goods></app-goods> -->
 <!-- <app-transition></app-transition> -->
 <!-- <app-user></app-user> -->
-<app-request></app-request>
+<!-- <app-request></app-request> -->
+<h1>root component</h1>
+<h2>
+  <a [routerLink]="['/home']" routerLinkActive="active">home</a>
+  <br />
+  <a [routerLink]="['/user']" routerLinkActive="active">user</a>
+  <br />
+
+  <a [routerLink]="['/news']" routerLinkActive="active">news</a>
+  <br />
+
+  <a [routerLink]="['/form']" routerLinkActive="active">form</a>
+</h2>
 <router-outlet></router-outlet>
