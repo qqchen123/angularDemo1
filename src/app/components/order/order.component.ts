@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 @Component({
   selector: 'app-order',
   templateUrl: './order.component.html',
@@ -25,5 +25,12 @@ export class OrderComponent implements OnInit {
   }
   goToHome() {
     this.router.navigate(['home']);
+  }
+  getToUrl() {
+    // alert(12312);
+    let queryParams: NavigationExtras = {
+      queryParams: { aid: 33333 },
+    };
+    this.router.navigate(['/home'], queryParams);
   }
 }
